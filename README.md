@@ -68,7 +68,7 @@ import aws_cdk as cdk
 from cdk_organizations_list_accounts import OrganizationsListAccounts
 
 app = cdk.App()
-stack = cdk.Stack(app, "Stack", env={"region": "ap-northeast-1"})
+stack = cdk.Stack(app, "Stack", env={"region": "us-east-1"})
 OrganizationsListAccounts(stack, "Organizations-List-Accounts")
 app.synth()
 ```
