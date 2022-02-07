@@ -16,6 +16,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     },
   },
   keywords: ['aws', 'organizations', 'cdk', 'csv'],
+  majorVersion: 1,
   name: 'cdk-organizations-list-accounts',
   publishToPypi: {
     distName: 'cdk-organizations-list-accounts',
