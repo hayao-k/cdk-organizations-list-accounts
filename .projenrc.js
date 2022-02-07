@@ -2,14 +2,31 @@ const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'hayao-k',
   authorAddress: '30886141+hayao-k@users.noreply.github.com',
-  cdkVersion: '2.1.0',
+  autoApproveOptions: {
+    allowedUsernames: ['hayao-k'],
+  },
+  cdkVersion: '2.10.0',
+  compat: true,
   defaultReleaseBranch: 'main',
+  description: 'cdk-organizations-list-accounts is an AWS CDK building library that outputs a list of AWS organization accounts in CSV format.',
+  depsUpgradeOptions: {
+    ignoreProjen: false,
+    workflowOptions: {
+      labels: ['auto-approve'],
+    },
+  },
+  keywords: ['aws', 'organizations', 'cdk', 'csv'],
   name: 'cdk-organizations-list-accounts',
+  publishToPypi: {
+    distName: 'cdk-organizations-list-accounts',
+    module: 'cdk_organizations_list_accounts',
+  },
   repositoryUrl: 'https://github.com/hayao-k/cdk-organizations-list-accounts.git',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  stability: 'experimental',
 });
+
+const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage'];
+project.gitignore.exclude(...common_exclude);
+project.npmignore.exclude(...common_exclude, 'images');
+
 project.synth();
