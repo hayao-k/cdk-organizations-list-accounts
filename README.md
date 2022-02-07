@@ -27,9 +27,8 @@ Id,Name,Email,Status,Joined Method,Joined Timestamp,OU Id,1st Level OU,2nd Level
 ## Limitations at present
 * Must deploy to AWS Organization's management account
 * Events other than CreateAccount are not supported
-* 
 
-## ## Getting Started
+## Getting Started
 ### TypeScript
 Installation
 
