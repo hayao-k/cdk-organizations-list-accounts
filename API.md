@@ -42,7 +42,7 @@ new OrganizationsListAccounts(scope: Construct, id: string)
 ##### `toString` <a name="toString" id="cdk-organizations-list-accounts.OrganizationsListAccounts.toString"></a>
 
 ```typescript
-public toString()
+public toString(): string
 ```
 
 Returns a string representation of this construct.
